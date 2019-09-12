@@ -27,5 +27,5 @@ We evaluate our method using 3 different models on Cora, Citeseer, Pubmed, and N
 * dfnets_layer.py - DFNets spectral CNN layer.
 * utils.py - data preprocessing, data spliting, and etc.
 * dfnets_optimizer.py - coefficients optimizer.
-* dfnets_conv_op.py - convolutional operation with feedback-looped filters.
+* dfnets_conv_op.py - convolution operation with feedback-looped filters.
 * dfnets_example.ipynb - demo code for dfnets.
