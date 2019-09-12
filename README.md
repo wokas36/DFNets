@@ -1,13 +1,13 @@
 # DFNets: Distributed Feedback-Looped Networks
 
-This is a keras implementation of DFNets for semi-supervised classification.
+This is a Keras implementation of DFNets for semi-supervised classification of nodes on graphs.
 
 Asiri Wijesinghe, Qing Wang, [DFNets: Spectral CNNs for Graphs with feedback-looped Filters](NeurIPS 2019).
 
 ## Requirements
 
 * keras (>= 2.2.2)
-* TensorFlow (>= 1.9.0)
+* tensorflow (>= 1.9.0)
 * sklearn (>= 0.19.1)
 * cvxpy (>= 1.0.10)
 * networkx (>= 2.2)
@@ -25,7 +25,7 @@ We evaluate our method using 3 different models on Cora, Citeseer, Pubmed, and N
 ## Files description
 
 * dfnets_layer.py - DFNets spectral CNN layer.
-* utils.py - data preprocessing, data spliting, and etc.
 * dfnets_optimizer.py - coefficients optimizer.
 * dfnets_conv_op.py - convolution operation with feedback-looped filters.
+* utils.py - data preprocessing, data spliting, and etc.
 * dfnets_example.ipynb - demo code for dfnets.
