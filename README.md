@@ -2,7 +2,7 @@
 
 This is a python implementation of DFNets for semi-supervised classification.
 
-Asiri Wijesinghe, Qing Wang, [DFNets: Spectral CNNs for Graphs with feedback-looped Filters] (NeurIPS 2019).
+Asiri Wijesinghe, Qing Wang, [DFNets: Spectral CNNs for Graphs with feedback-looped Filters](NeurIPS 2019).
 
 ## Requirements
 
@@ -14,7 +14,7 @@ Asiri Wijesinghe, Qing Wang, [DFNets: Spectral CNNs for Graphs with feedback-loo
 
 ## Models and dataset references
 
-We use the same data splitting for each dataset as in Yang et al. [Revisiting semi-supervised learning with graph embeddings] (https://arxiv.org/pdf/1603.08861.pdf).
+We use the same data splitting for each dataset as in Yang et al. [Revisiting semi-supervised learning with graph embeddings](https://arxiv.org/pdf/1603.08861.pdf).
 
 We evaluate our method using 3 different models on Cora, Citeseer, Pubmed, and NELL datasets:
 
