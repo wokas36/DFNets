@@ -1,6 +1,6 @@
 # DFNets: Distributed Feedback-Looped Networks
 
-This is a python implementation of DFNets for semi-supervised classification.
+This is a keras implementation of DFNets for semi-supervised classification.
 
 Asiri Wijesinghe, Qing Wang, [DFNets: Spectral CNNs for Graphs with feedback-looped Filters](NeurIPS 2019).
 
