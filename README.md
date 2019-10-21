@@ -12,7 +12,7 @@ Please cite our paper if you use this code in your research work.
 @inproceedings{asiri2019dfnets,
   title={DFNets: Spectral CNNs for Graphs with Feedback-Looped Filters}, 
   author={Wijesinghe, Asiri and Wang, Qing}, 
-  booktitle={NeurIPS},
+  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
   year={2019}
 }
 ```
