@@ -6,11 +6,11 @@ Asiri Wijesinghe, Qing Wang, [DFNets: Spectral CNNs for Graphs with feedback-Loo
 
 ## Cite
 
-Please cite our paper if you use this code in your research work:
+Please cite our paper if you use this code in your research work.
 
 ```
 @inproceedings{asiri2019dfnets,
-  title={DFNets: Spectral CNNs for Graphs withFeedback-Looped Filters}, 
+  title={DFNets: Spectral CNNs for Graphs with Feedback-Looped Filters}, 
   author={Wijesinghe, Asiri and Wang, Qing}, 
   booktitle={NeurIPS},
   year={2019}
