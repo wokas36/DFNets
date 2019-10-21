@@ -43,5 +43,5 @@ Please cite our paper if you use this code in your research work.
 }
 ```
 
-## Contact for DFNets Issues
+## Contact for DFNets issues
 Please contact me: asiri.wijesinghe@anu.edu.au if you have any questions / submit a Github issue if you find any bugs.
