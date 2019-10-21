@@ -2,7 +2,20 @@
 
 This is a Keras implementation of DFNets for semi-supervised classification of nodes on graphs.
 
-Asiri Wijesinghe, Qing Wang, [DFNets: Spectral CNNs for Graphs with feedback-looped Filters](NeurIPS 2019).
+Asiri Wijesinghe, Qing Wang, [DFNets: Spectral CNNs for Graphs with feedback-Looped Filters](NeurIPS 2019).
+
+## Cite
+
+Please cite our paper if you use this code in your research work:
+
+```
+@inproceedings{asiri2019dfnets,
+  title={DFNets: Spectral CNNs for Graphs withFeedback-Looped Filters}, 
+  author={Wijesinghe, Asiri and Wang, Qing}, 
+  booktitle={NeurIPS},
+  year={2019}
+}
+```
 
 ## Requirements
 
@@ -29,3 +42,6 @@ We evaluate our method using 3 different models on Cora, Citeseer, Pubmed, and N
 * dfnets_conv_op.py - convolution operation with feedback-looped filters.
 * utils.py - data preprocessing, data spliting, and etc.
 * dfnets_example.ipynb - demo code for dfnets.
+
+## Contact for DFNets Issues
+Please contact me: asiri.wijesinghe@anu.edu.au if you have any questions / submit a Github issue if you find any bugs.
