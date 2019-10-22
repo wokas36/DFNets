@@ -30,7 +30,7 @@ We evaluate our method using 3 different models on Cora, Citeseer, Pubmed, and N
 * utils.py - data preprocessing, data spliting, and etc.
 * dfnets_example.ipynb - demo code for dfnets.
 
-## Cite
+## Citation
 
 Please cite our paper if you use this code in your research work.
 
@@ -42,6 +42,10 @@ Please cite our paper if you use this code in your research work.
   year={2019}
 }
 ```
+
+## License
+
+MIT License
 
 ## Contact for DFNets issues
 Please contact me: asiri.wijesinghe@anu.edu.au if you have any questions / submit a Github issue if you find any bugs.
