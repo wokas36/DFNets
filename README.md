@@ -51,10 +51,4 @@ MIT License
 Please contact me: asiri.wijesinghe@anu.edu.au if you have any questions / submit a Github issue if you find any bugs.
 
 ## Ranking
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dfnets-spectral-cnns-for-graphs-with-feedback/node-classification-on-nell)](https://paperswithcode.com/sota/node-classification-on-nell?p=dfnets-spectral-cnns-for-graphs-with-feedback)
-
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dfnets-spectral-cnns-for-graphs-with-feedback/node-classification-on-pubmed)](https://paperswithcode.com/sota/node-classification-on-pubmed?p=dfnets-spectral-cnns-for-graphs-with-feedback)
-
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dfnets-spectral-cnns-for-graphs-with-feedback/node-classification-on-cora)](https://paperswithcode.com/sota/node-classification-on-cora?p=dfnets-spectral-cnns-for-graphs-with-feedback)
-
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dfnets-spectral-cnns-for-graphs-with-feedback/node-classification-on-citeseer)](https://paperswithcode.com/sota/node-classification-on-citeseer?p=dfnets-spectral-cnns-for-graphs-with-feedback)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dfnets-spectral-cnns-for-graphs-with-feedback/node-classification-on-nell)](https://paperswithcode.com/sota/node-classification-on-nell?p=dfnets-spectral-cnns-for-graphs-with-feedback) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dfnets-spectral-cnns-for-graphs-with-feedback/node-classification-on-pubmed)](https://paperswithcode.com/sota/node-classification-on-pubmed?p=dfnets-spectral-cnns-for-graphs-with-feedback) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dfnets-spectral-cnns-for-graphs-with-feedback/node-classification-on-cora)](https://paperswithcode.com/sota/node-classification-on-cora?p=dfnets-spectral-cnns-for-graphs-with-feedback) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dfnets-spectral-cnns-for-graphs-with-feedback/node-classification-on-citeseer)](https://paperswithcode.com/sota/node-classification-on-citeseer?p=dfnets-spectral-cnns-for-graphs-with-feedback)
