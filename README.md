@@ -2,7 +2,10 @@
 
 This is a Keras implementation of DFNets for semi-supervised classification of nodes on graphs.
 
-Asiri Wijesinghe, Qing Wang, [DFNets: Spectral CNNs for Graphs with feedback-Looped Filters](NeurIPS 2019).
+Asiri Wijesinghe, Qing Wang, [DFNets: Spectral CNNs for Graphs with feedback-Looped Filters](https://arxiv.org/abs/1910.10866).
+
+## Ranking
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dfnets-spectral-cnns-for-graphs-with-feedback/node-classification-on-nell)](https://paperswithcode.com/sota/node-classification-on-nell?p=dfnets-spectral-cnns-for-graphs-with-feedback) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dfnets-spectral-cnns-for-graphs-with-feedback/node-classification-on-pubmed)](https://paperswithcode.com/sota/node-classification-on-pubmed?p=dfnets-spectral-cnns-for-graphs-with-feedback) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dfnets-spectral-cnns-for-graphs-with-feedback/node-classification-on-cora)](https://paperswithcode.com/sota/node-classification-on-cora?p=dfnets-spectral-cnns-for-graphs-with-feedback) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dfnets-spectral-cnns-for-graphs-with-feedback/node-classification-on-citeseer)](https://paperswithcode.com/sota/node-classification-on-citeseer?p=dfnets-spectral-cnns-for-graphs-with-feedback)
 
 ## Requirements
 
@@ -49,6 +52,3 @@ MIT License
 
 ## Contact for DFNets issues
 Please contact me: asiri.wijesinghe@anu.edu.au if you have any questions / submit a Github issue if you find any bugs.
-
-## Ranking
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dfnets-spectral-cnns-for-graphs-with-feedback/node-classification-on-nell)](https://paperswithcode.com/sota/node-classification-on-nell?p=dfnets-spectral-cnns-for-graphs-with-feedback) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dfnets-spectral-cnns-for-graphs-with-feedback/node-classification-on-pubmed)](https://paperswithcode.com/sota/node-classification-on-pubmed?p=dfnets-spectral-cnns-for-graphs-with-feedback) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dfnets-spectral-cnns-for-graphs-with-feedback/node-classification-on-cora)](https://paperswithcode.com/sota/node-classification-on-cora?p=dfnets-spectral-cnns-for-graphs-with-feedback) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dfnets-spectral-cnns-for-graphs-with-feedback/node-classification-on-citeseer)](https://paperswithcode.com/sota/node-classification-on-citeseer?p=dfnets-spectral-cnns-for-graphs-with-feedback)
