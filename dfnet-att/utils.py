@@ -174,7 +174,7 @@ def sample_mask(idx, l):
     return np.array(mask, dtype=np.bool)
 
 def get_splits(y):
-    idx_train = range(200)
+    idx_train = range(140)
     idx_val = range(200, 500)
     idx_test = range(500, 1500)
     y_train = np.zeros(y.shape, dtype=np.int32)
