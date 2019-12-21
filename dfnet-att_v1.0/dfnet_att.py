@@ -36,14 +36,14 @@ warnings.filterwarnings('ignore')
 # In[3]:
 
 
-X, A, Y = load_data_attention(dataset='cora')
+X, A, S, Y = load_data_attention(dataset='cora')
 A = np.array(A.todense())
 
 
 # In[4]:
 
 
-_, Y_val, _, train_idx, val_idx, test_idx, train_mask = get_splits(Y)
+_, Y_val, _, train_idx, val_idx, test_idx, train_mask = get_splits(Y, S)
 train_idx = np.array(train_idx)
 val_idx = np.array(val_idx)
 test_idx = np.array(test_idx)

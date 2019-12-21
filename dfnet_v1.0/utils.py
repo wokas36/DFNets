@@ -18,6 +18,7 @@ def load_data(path="../data/cora/", dataset="cora"):
     idx_features_labels = np.genfromtxt("{}{}.content".format(path, dataset), dtype=np.dtype(str))
     features = sp.csr_matrix(idx_features_labels[:, 1:-1], dtype=np.float32)
     labels = encode_onehot(idx_features_labels[:, -1])
+    samples = labels[np.random.choice(labels.shape[0], 200, replace=False)]
 
     # build graph
     idx = np.array(idx_features_labels[:, 0], dtype=np.int32)
@@ -36,7 +37,7 @@ def load_data(path="../data/cora/", dataset="cora"):
 
     print('Dataset has {} nodes, {} edges, {} features.'.format(adj.shape[0], edges.shape[0], features.shape[1]))
 
-    return features.todense(), adj, labels
+    return features.todense(), adj, samples, labels
 
 
 def load_data_attention(path="../data/cora/", dataset="cora"):
@@ -46,6 +47,7 @@ def load_data_attention(path="../data/cora/", dataset="cora"):
     idx_features_labels = np.genfromtxt("{}{}.content".format(path, dataset), dtype=np.dtype(str))
     features = sp.csr_matrix(idx_features_labels[:, 1:-1], dtype=np.float32)
     labels = encode_onehot(idx_features_labels[:, -1])
+    samples = labels[np.random.choice(labels.shape[0], 200, replace=False)]
 
     # build graph
     idx = np.array(idx_features_labels[:, 0], dtype=np.int32)
@@ -64,7 +66,7 @@ def load_data_attention(path="../data/cora/", dataset="cora"):
 
     print('Dataset has {} nodes, {} edges, {} features.'.format(adj.shape[0], edges.shape[0], features.shape[1]))
 
-    return features.todense(), adj, labels
+    return features.todense(), adj, samples, labels
 
 
 def normalize_features(mx):
@@ -173,24 +175,11 @@ def sample_mask(idx, l):
     mask[idx] = 1
     return np.array(mask, dtype=np.bool)
 
-def get_splits(y):
-    idx_train = range(140)
-    idx_val = range(200, 500)
+
+def get_splits(y, s):
+    idx_train = range(len(s))
+    idx_val = range(len(s), 500)
     idx_test = range(500, 1500)
-    y_train = np.zeros(y.shape, dtype=np.int32)
-    y_val = np.zeros(y.shape, dtype=np.int32)
-    y_test = np.zeros(y.shape, dtype=np.int32)
-    y_train[idx_train] = y[idx_train]
-    y_val[idx_val] = y[idx_val]
-    y_test[idx_test] = y[idx_test]
-    train_mask = sample_mask(idx_train, y.shape[0])
-    return y_train, y_val, y_test, idx_train, idx_val, idx_test, train_mask
-
-
-def get_splits_v1(y):
-    idx_train = range(1708)
-    idx_val = range(1708, 1708 + 500)
-    idx_test = range(1708 + 500, 2708)
     y_train = np.zeros(y.shape, dtype=np.int32)
     y_val = np.zeros(y.shape, dtype=np.int32)
     y_test = np.zeros(y.shape, dtype=np.int32)
@@ -269,4 +258,4 @@ def lmax(L, normalized=True):
     if normalized:
         return 2
     else:
-        return scipy.sparse.linalg.eigsh(L, k=1, which='LM', return_eigenvectors=False)[0]
+        return eigsh(L, k=1, which='LM', return_eigenvectors=False)[0]
