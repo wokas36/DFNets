@@ -45,7 +45,7 @@ def dfnets_coefficients_optimizer(mu, response, Kb, Ka, radius=0.85, show=0):
     # M is the Vandermonde that will be used to evaluate the denominator.
     MM = np.zeros((len(mu), Ka))
 
-    MM[:,0] = mu
+    MM[:,0] = mu  
 
     for k in range(1, Ka):
         MM[:,k] = MM[:,k-1] * mu
@@ -55,13 +55,13 @@ def dfnets_coefficients_optimizer(mu, response, Kb, Ka, radius=0.85, show=0):
     for k in range(0, Ka):
         V[:,k] = mu**k
 
-    ia = Variable(Ka,1)
-    ib = Variable(Kb+1,1)
+    ia = Variable(shape=(Ka,1))
+    ib = Variable(shape=(Kb+1,1))
     
     reshape_mu = response(mu).reshape(response(mu).shape[0], 1)
     
     objective = Minimize(norm(reshape_mu + np.diag(response(mu))@MM@ia - NM@ib))
-    #constraints = [max_entries(abs(V@ia)) <= radius]
+    #constraints = [max(abs(V@ia)) <= radius]
     constraints = [norm((V@ia), 'inf') <= radius]
     
     prob = Problem(objective, constraints)
@@ -70,7 +70,7 @@ def dfnets_coefficients_optimizer(mu, response, Kb, Ka, radius=0.85, show=0):
     a = ia.value
     b = ib.value
     
-    # this is the achieved response
+    # this is the achieved response.
     rARMA = np.polyval(np.flipud(b),mu)/np.polyval(np.flipud(a), mu)
 
     # error
