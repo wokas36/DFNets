@@ -39,7 +39,7 @@ def load_data(path="../data/cora/", dataset="cora"):
     idx_features_labels = np.genfromtxt("{}{}.content".format(path, dataset), dtype=np.dtype(str))
     features = sp.csr_matrix(idx_features_labels[:, 1:-1], dtype=np.float32)
     labels = encode_onehot(idx_features_labels[:, -1])
-    samples = labels[np.random.choice(labels.shape[0], 200, replace=False)]
+    samples = labels[np.random.choice(labels.shape[0], 140, replace=False)]
 
     # build graph
     idx = np.array(idx_features_labels[:, 0], dtype=np.int32)
@@ -68,7 +68,7 @@ def load_data_attention(path="../data/cora/", dataset="cora"):
     idx_features_labels = np.genfromtxt("{}{}.content".format(path, dataset), dtype=np.dtype(str))
     features = sp.csr_matrix(idx_features_labels[:, 1:-1], dtype=np.float32)
     labels = encode_onehot(idx_features_labels[:, -1])
-    samples = labels[np.random.choice(labels.shape[0], 200, replace=False)]
+    samples = labels[np.random.choice(labels.shape[0], 140, replace=False)]
 
     # build graph
     idx = np.array(idx_features_labels[:, 0], dtype=np.int32)
@@ -127,11 +127,11 @@ def load_data(dataset_str):
 
     labels = np.vstack((ally, ty))
     labels[test_idx_reorder, :] = labels[test_idx_range, :]
-    y = labels[np.random.choice(labels.shape[0], 200, replace=False)]
+    s_val = labels[np.random.choice(labels.shape[0], 500, replace=False)]
     
     idx_train = range(len(y))
-    idx_val = range(len(y), len(y) + 500)
-    idx_test = range(len(y) + 500, len(y) + 1500)
+    idx_val = range(len(y), len(s_val) + 500)
+    idx_test = range(len(s_val) + 500, len(s_val) + 1500)
 
     train_mask = sample_mask(idx_train, labels.shape[0])
     val_mask = sample_mask(idx_val, labels.shape[0])
