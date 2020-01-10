@@ -35,37 +35,21 @@ warnings.filterwarnings('ignore')
 # In[2]:
 # In[3]:
 
-
-X, A, S, Y = load_data_attention(dataset='cora')
+#Read data.
+A, X, Y_train, Y_val, Y_test, train_idx, val_idx, test_idx, train_mask, val_mask, test_mask, Y = load_data('cora')
 A = np.array(A.todense())
-
 
 # In[4]:
 
-
-_, Y_val, _, train_idx, val_idx, test_idx, train_mask = get_splits(Y, S)
-train_idx = np.array(train_idx)
-val_idx = np.array(val_idx)
-test_idx = np.array(test_idx)
-labels = np.argmax(Y, axis=1) + 1
-
-# Normalize X
-#X /= X.sum(1).reshape(-1, 1)
+X = normalize_features(X)
+X = X.todense()
 X = np.array(X)
 
-Y_train = np.zeros(Y.shape)
+labels = np.argmax(Y, axis=1) + 1
 labels_train = np.zeros(labels.shape)
-Y_train[train_idx] = Y[train_idx]
 labels_train[train_idx] = labels[train_idx]
 
-Y_test = np.zeros(Y.shape)
-labels_test = np.zeros(labels.shape)
-Y_test[test_idx] = Y[test_idx]
-labels_test[test_idx] = labels[test_idx]
-
-
 # In[5]:
-
 
 #Identity matrix for self loop.
 I = np.matrix(np.eye(A.shape[0]))
@@ -92,7 +76,7 @@ def step(x, a):
 response = lambda x: step(x, lmax(L)/2 - lambda_cut)
 
 # Since the eigenvalues might change, sample eigenvalue domain uniformly
-mu = np.linspace(0, lmax(L), 100)
+mu = np.linspace(0, lmax(L), 500)
 
 #AR filter order.
 Ka = 5
@@ -214,5 +198,6 @@ for epoch in range(nb_epochs):
               class_weight=class_weight_dic, verbose=0)
     Y_pred = model.predict(X, batch_size=A.shape[0])
     _, train_acc = evaluate_preds(Y_pred, [Y_train], [train_idx])
+    _, val_acc = evaluate_preds(Y_pred, [Y_val], [val_idx])
     _, test_acc = evaluate_preds(Y_pred, [Y_test], [test_idx])
     print("Epoch: {:04d}".format(epoch), "train_acc= {:.4f}".format(train_acc[0]), "test_acc= {:.4f}".format(test_acc[0]))
