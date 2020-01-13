@@ -130,7 +130,7 @@ def dense_factor(inputs, input_signal, num_nodes, droput):
 			  arma_conv_AR, 
 			  arma_conv_MA, 
 			  input_signal,
-			  num_attention_heads=8, 
+			  num_attention_heads=4, 
 			  attention_combine='concat', 
 			  attention_dropout=0.5,
 			  kernel_initializer=initializers.glorot_normal(seed=1), 
